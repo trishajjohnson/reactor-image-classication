@@ -17,7 +17,9 @@ const router = express.Router();
 
  router.get("/", async function (req, res, next) {
     try {
-      return res.json({ msg: "its working" });
+      const result = await Image.get();
+      console.log("result", result);
+      return res.json({ result });
     } catch (err) {
       return next(err);
     }

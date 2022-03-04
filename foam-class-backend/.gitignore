@@ -1,1 +1,4 @@
 node_modules
+foam-schema.sql
+foam-seed.sql
+foam.sql
