@@ -1,0 +1,21 @@
+/* .ImageCard {
+    height: 350px;
+    width: 350px;
+}
+
+.ImageCard:hover {
+    background-color: rgba(22, 22, 22, 0.061) !important;
+}
+
+.card-text {
+    color: grey;
+}
+
+.image-img {
+    width: 300px !important;
+    padding-top: 20px;
+} */
+
+.toBeClassified {
+    color: red !important;
+}
