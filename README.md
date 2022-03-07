@@ -18,7 +18,9 @@ A screen recording of the look and function of the application can be found here
 
 ## Notes
 
-First, I noticed that the URL where the JSON is found expires, so when I went to seed the database, I would get a 403 error.  In order to fix this, I had to refresh the URL in the browser and recopy and paste it into the db_seed.js file before I seeded the database.
+I noticed that the URL where the JSON is found expires, so when I went to seed the database, I would get a 403 error.  In order to fix this, I had to refresh the URL in the browser and recopy and paste it into the db_seed.js file before I seeded the database.
+
+## Design/Features
 
 As far as design, the application is fairly straight forward. There is an ImageList and ImageCard component on the frontend.  The ImageList maps over the images object passed into it as a prop by the App.js component, and renders an ImageCard for each image.  The ImageList is rendered in the App.js component.  On the backend, there is a routes and models file for images, as well as a db, config and seed script files.  
 
