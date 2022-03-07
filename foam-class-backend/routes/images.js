@@ -17,10 +17,10 @@ const router = express.Router();
 
  router.get("/", async function (req, res, next) {
     try {
-      const {filter, limit, page} = req.body;
-      console.log("req.body", req.body);
+      const {page, filter, limit} = req.query;
+      console.log("req.query", req.query);
       console.log("filter, limit, page", filter, limit, page);
-      const images = await Image.get();
+      const images = await Image.get(filter, limit, page);
       
       return res.json({ images });
     } catch (err) {

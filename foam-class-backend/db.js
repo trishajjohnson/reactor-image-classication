@@ -1,9 +1,12 @@
 "use strict";
 
-/** Database setup for foam. */
+/** Database setup for foam classification app. */
+
 const { Client } = require("pg");
 
-const db = new Client({ connectionString: "foam" });
+const DATABASE_NAME = process.env.DATABASE_NAME || 'foamdb';
+
+const db = new Client({ connectionString: DATABASE_NAME });
 
 db.connect();
 

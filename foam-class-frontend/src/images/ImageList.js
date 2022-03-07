@@ -7,19 +7,16 @@ import { Grid } from '@mui/material';
 /**  Container for images.  */
 
 function ImageList({images, updateImage}) {
-    console.log("images passed to ImageList", images);
 
     return (
         
-        <div className="">
-            <Grid container>
+            <Grid container justifyContent="center" spacing={2}>
                 {images.rows.map(i => (
-                    <div className="col-md-3 album-col mb-3">
+                    <Grid item md={3}>
                         <ImageCard key={i.id} image={i} update={updateImage} />
-                    </div>
+                    </Grid>
                 ))}
             </Grid>
-        </div>         
     );
 }
 

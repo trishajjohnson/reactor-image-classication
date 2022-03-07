@@ -2,7 +2,17 @@
 
 const db = require("../db");
 
-/** Related functions for images. */
+/** Related functions for images. 
+ * 
+ *  Get all images, with optional filter, 
+ *  limit and page params for filtering 
+ *  images.
+ * 
+ *  Update images when classifying an image.
+ *  Image can be foaming, not foaming or 
+ *  unclassified.
+ * 
+*/
 
 class Image {
 
