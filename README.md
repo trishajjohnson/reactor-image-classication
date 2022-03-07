@@ -1,6 +1,6 @@
 # Getting Started
 
-The foam classification application displays all the bioreactor images as well as radio buttons to classify/reclassify the image as foaming or not foaming.  You may filter the images displayed by 'all', 'foaming', 'not foaming' and unclassified'.  You may also change the number of images displayed on the page by 20, 50 and 100.
+The foam classification application displays all the bioreactor images as well as radio buttons to classify/reclassify the image as foaming or not foaming.  You may filter the images displayed by 'all', 'foaming', 'not foaming' and 'unclassified'.  You may also change the number of images displayed on the page by 20, 50 and 100.
 
 ## Seeding the Database
 
