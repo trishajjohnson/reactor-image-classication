@@ -6,7 +6,7 @@ The foam classification application displays all the bioreactor images as well a
 
 I chose to use PostgreSQL for the database.  After pulling code, create a database either by the name of 'foamdb' or a name of your choice.  If you choose your own name, navigate to the db.js file in the backend folder and change the alternate name on line 7.  You also have the option of saving your name as an environmental variable.
 
-To seed the JSON data into the database, I created an easy to use script you can run in the command line.  Navigate to the backend folder and run the command 'npm run db:seed'. This will run the db_seed.js file in the backend, calling the given url using axios, then creating the images table and looping through the JSON data to insert the rows.  Table, by default, serializes an id for each image and inserts an is_foaming and is_classified attribute, both set to 'false'.
+To seed the JSON data into the database, I created an easy to use script you can run in the command line.  Navigate to the backend folder and run the command 'npm run db:seed'. This will run the db_seed.js file in the backend, calling the given url using axios, then creating the images table and looping through the JSON data to insert the rows (url and last_modified).  Table, by default, serializes an id for each image and inserts an is_foaming and is_classified attribute, both set to 'false'.
 
 ## Installing Dependencies/Starting App
 
@@ -24,6 +24,6 @@ As far as design, the application is fairly straight forward. There is an ImageL
 
 The bulk of the functionality is housed in the App component, including handling the changing filters and clicking on the pagination.  At initial mounting of the App.js component, in its useEffect, the getImages function is called.  This function calls the backend route GET /images and, by default loads all images, including those classified as foaming, not foaming and unclassified.  
 
-Initially, when JSON is seeded into the database, all images are marked as unclassified and is_foaming is set to false.  Rendered on the page inside the ImageCard is the text 'Image needs classification' in red.  Once you click on the image card to classify it as either foaming or not foaming, the backend PATCH /images route is called and image attribute is_foaming is updated in the database as well as the is_classified attribute set to 'true'.  The image is then updated on the page and red text alerting client image needs classification disappears.   
+Initially, when JSON is seeded into the database, all images are marked as unclassified and is_foaming is set to false.  Rendered on the page inside the ImageCard is the text 'Image needs classification' in red.  Once you click on the image card to classify it as either foaming or not foaming, the backend PATCH /images route is called and image attribute is_foaming is updated in the database as well as the is_classified attribute set to 'true' and last_modified is updated with new Timestamp.  The image is then updated on the page and red text alerting client image needs classification disappears.   
 
 
